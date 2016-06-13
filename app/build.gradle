@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: "com.soasta.mpulse"
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -25,13 +26,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
 
-        //Tealium
+    //Tealium
     compile (name:'tealium-5.0.3' , ext:'aar')
     compile (name:'tealium.lifecycle-5.0.0' , ext:'aar')
 
     //Soasta
-    compile ('com.soasta.mpulse:mpulse:0.5.3') {
-        exclude(group: "com.android.tools.build", module: "gradle")
-   }
+    compile 'com.soasta.mpulse:mpulse:2.0.0'
 
 }
