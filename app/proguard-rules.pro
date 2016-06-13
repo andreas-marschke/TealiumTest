@@ -9,6 +9,12 @@
 
 # Add any project specific keep options here:
 
+# Prevent Proguard from optimizing out the beacon sending part of
+# the soasta mPulse Native for Mobile implementation
+# This has been a reported issue observed in other applications
+-keep class com.soasta.** { *; }
+-keepattributes Signature
+
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
